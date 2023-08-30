@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" href="css/estilo.css">
+    	<meta charset="utf-8">
+    	<meta name="viewport" content="width=device=width, user-scalable=no">
+      <script src="jquery/jquery-1.6.3.min.js"></script>
+        <title>Resgistro</title>
+
+    </head>
+    <body>
+      <div id="fondo">
+
+      <form autocomplete="off" action="Formulario.php" method="post" name="formulario">
+        <fieldset>
+          <!--*****************************************************************************************************************************-->
+          <header>
+            <legend><h1>Formato de Venta</h1></legend>
+          </header>
+
+          <h3>Información general</h3>
+          <section id="contenido">
+            <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+            <div class="div1">
+              <label for="ejecutivo"><strong>Ejecutivo</strong></label>
+              <input type="text" id="ejecutivo" name="ejecutivo" value="" maxlength="50" autofocus="autofocus" required>
+            </div>
+
+            <div class="div1">
+              <label for="empresa"><strong>Empresa - Outsourcing</strong></label>
+              <select id="empresa" name="empresa" required>
+                <option></option>
+                <option>Abogados & Asociados</option>
+                <option>Global Mark International</option>
+                <option>Asesorando al dia</option>
+                <option>Servicios Diturint</option>
+                <option>Think Big</option>
+                <option>Ambientes Digitales</option>
+                <option>Guadalupana</option>
+              </select>
+            </div>
+
+            <div class="div1">
+              <label for="umodificacion"><strong>Ultima modificación</strong></label>
+              <input type="date" id="umodificacion" name="umodificacion" value="" required> 
+            </div>
+            <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+            <div class="div2">
+              <label for="ccalidad"><strong>Control de calidad</strong></label>
+              <input type="text" id="ccalidad" name="ccalidad" value="" maxlength="40" autofocus="autofocus" required>
+            </div>
+
+            <div class="div2">
+              <label for="eventa"><strong>Estatus venta</strong></label>
+              <select id="eventa" name="eventa" required>
+                <option></option>
+                <option>opción1</option>
+                <option>opción2</option>
+                <option>opción3</option>
+              </select>
+            </div>
+
+            <div class="div2">
+              <label for="eactual"><strong>Estado actual</strong></label>
+              <input type="text" id="eactual" name="eactual" value="" maxlength="40" autofocus="autofocus" required>
+            </div>
+
+            <div class="div2">
+              <label for="descripcion"><strong>Descripción</strong></label>
+              <input type="text" id="descripcion" name="descripcion" value="" maxlength="40" autofocus="autofocus" required>
+            </div>
+            
+          </section>
+          <!--*****************************************************************************************************************************-->
+          
+          <header>
+            <legend><h1>Información del Cliente</h1></legend>
+          </header>
+
+          <section id="contenido">
+            <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+            <div class="divotro">
+              <div class="divlabelotro1">
+                <label for="nregistro" class="labelotro11"><strong>Número de registro:</strong></label>
+                <input type="number" id="nregistro" class="labelotro111" name="nregistro" value="" autofocus="autofocus" required>
+              </div>
+              <div class="divlabelotro1">
+                <label for="fventa"  class="labelotro11"><strong>Fecha de venta:</strong></label>
+                <input type="datetime-local" id="fventa" class="labelotro111" name="fventa" readonly required>
+              </div>
+            </div>
+            <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+            <div class="div1">
+              <label for="nombre"><strong>Nombre</strong></label>
+              <input type="text" id="nombre" name="nombre" value="" maxlength="50" autofocus="autofocus" required>
+            </div>
+
+            <div class="div1">
+              <label for="documento"><strong>Documento</strong></label>
+              <input type="number" id="documento" name="documento" value="" oninput="limitNumberLength(this)" autofocus="autofocus" required> 
+            </div>
+
+            <div class="div1">
+              <label for="fnacimiento"><strong>Fecha de nacimiento</strong></label>
+              <input type="date" id="fnacimiento" name="fnacimiento" value="" required> 
+            </div>
+            <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+            <div class="div2">
+              <label for="telefono1"><strong>Teléfono1</strong></label>
+              <input type="number" id="telefono1" name="telefono1" value="" oninput="limitNumberLength(this)" autofocus="autofocus" required>
+            </div>
+
+            <div class="div2">
+              <label for="whatsapp"><strong>Whatsapp</strong></label>
+              <input type="number" id="whatsapp" name="whatsapp" value="" oninput="limitNumberLength(this)" autofocus="autofocus">
+            </div>
+
+            <div class="div2">
+              <label for="telefono2"><strong>Teléfono2</strong></label>
+              <input type="number" id="telefono2" name="telefono2" value="" oninput="limitNumberLength(this)" autofocus="autofocus">
+            </div>
+            <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+            <div class="div3">
+              <label for="direccion"><strong>Dirección</strong></label>
+              <input type="text" id="direccion" name="direccion" value="" maxlength="120" autofocus="autofocus" required>
+            </div>
+
+            <div class="div1">
+              <label for="barrio"><strong>Barrio</strong></label>
+              <input type="text" id="barrio" name="barrio" value="" maxlength="50" autofocus="autofocus" required>
+            </div>
+            <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+            <div class="div2">
+              <label for="departamento"><strong>Departamento</strong></label>
+              <select id="departamento" name="departamento" required>
+                <option></option>
+                <option>opción1</option>
+                <option>opción2</option>
+                <option>opción3</option>
+              </select>
+            </div>
+
+            <div class="div2">
+              <label for="ciudad"><strong>Ciudad</strong></label>
+              <select id="ciudad" name="ciudad" required>
+                <option></option>
+                <option>opción1</option>
+                <option>opción2</option>
+                <option>opción3</option>
+              </select>
+            </div>
+
+            <div class="div2">
+              <label for="email"><strong>Email</strong></label>
+              <input type="email" id="email" name="email" value="" maxlength="40" autofocus="autofocus" required>
+            </div>
+            <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+            <div class="div4">
+              <label for="rgeografica"><strong>Referencia geográfica</strong></label>
+              <input type="text" id="rgeografica" name="rgeografica" value="" maxlength="190" autofocus="autofocus" required>
+            </div>
+            <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+            <div class="div4">
+              <label for="observaciones"><strong>Observaciones</strong></label>
+              <input type="text" id="observaciones" name="observaciones" value="" maxlength="190" autofocus="autofocus" required>
+            </div>
+            <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+            <div class="div4">
+              <label for="observaciones2"><strong>Observaciones2</strong></label>
+              <input type="text" id="observaciones2" name="observaciones2" value="" maxlength="190" autofocus="autofocus">
+            </div>
+
+          </section>
+          <!--*****************************************************************************************************************************-->
+
+          <header>
+            <legend><h1>Información de la Venta</h1></legend>
+          </header>
+
+          <section id="contenido">
+            <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+            <div class="divotro">
+              <div class="divlabelotro2">
+                <label><input class="radio" type="radio" name="tventa" value="raasistencia" required><strong class="strong2">Asistencia</strong></label>
+              </div>
+              <div class="divlabelotro2">
+                <label><input class="radio" type="radio" name="tventa" value="ramascota"><strong class="strong2">Mascota</strong></label>
+              </div>
+              <div class="divlabelotro2">
+                <label><input class="radio" type="radio" name="tventa" value="rapexequial"><strong class="strong2">Previsión Exequial</strong></label>
+              </div>
+            </div>
+            <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+            <div class="div6">
+              <label for="asistencia"><strong>Asistencia:</strong></label>
+            </div>
+
+            <div class="div5">
+              <label for="beneficiario1"><strong>Beneficiario1</strong></label>
+              <input type="text" id="beneficiario1" name="beneficiario1" value="" maxlength="40" autofocus="autofocus">
+            </div>
+
+            <div class="div5">
+              <label for="parentesto1"><strong>Parentesto</strong></label>
+              <input type="text" id="parentesto1" name="parentesto1" value="" maxlength="40" autofocus="autofocus">
+            </div>
+
+            <div class="div5">
+              <label for="beneficiario2"><strong>Beneficiario2</strong></label>
+              <input type="text" id="beneficiario2" name="beneficiario2" value="" maxlength="40" autofocus="autofocus">
+            </div>
+
+            <div class="div5">
+              <label for="parentesto2"><strong>Parentesto</strong></label>
+              <input type="text" id="parentesto2" name="parentesto2" value="" maxlength="40" autofocus="autofocus">
+            </div>
+            <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+            <div class="div6">
+              <label for="mascota"><strong>Mascota:</strong></label>
+            </div>
+
+            <div class="div5">
+              <label for="mtipo"><strong>Tipo</strong></label>
+              <select id="mtipo" name="mtipo">
+                <option></option>
+                <option>opción1</option>
+                <option>opción2</option>
+                <option>opción3</option>
+              </select>
+            </div>
+
+            <div class="div5">
+              <label for="mnombre"><strong>Nombre</strong></label>
+              <input type="text" id="mnombre" name="mnombre" value="" maxlength="40" autofocus="autofocus">
+            </div>
+
+            <div class="div5">
+              <label for="raza"><strong>Raza</strong></label>
+              <input type="text" id="raza" name="raza" value="" maxlength="40" autofocus="autofocus">
+            </div>
+
+            <div class="div5">
+              <label for="medad"><strong>Edad</strong></label>
+              <input type="text" id="medad" name="medad" value="" maxlength="40" autofocus="autofocus">
+            </div>
+            <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+            <div class="div6">
+              <label for="pexequial"><strong>Previsión Exequial:</strong></label>
+            </div>
+
+            <div class="div5">
+              <label for="ebeneficiario1"><strong>Beneficiario1</strong></label>
+              <input type="text" id="ebeneficiario1" name="ebeneficiario1" value="" maxlength="40" autofocus="autofocus">
+            </div>
+
+            <div class="div5">
+              <label for="eparentesto1"><strong>Parentesto</strong></label>
+              <input type="text" id="eparentesto1" name="eparentesto1" value="" maxlength="40" autofocus="autofocus">
+            </div>
+
+            <div class="div5">
+              <label for="ebeneficiario2"><strong>Beneficiario2</strong></label>
+              <input type="text" id="ebeneficiario2" name="ebeneficiario2" value="" maxlength="40" autofocus="autofocus">
+            </div>
+
+            <div class="div5">
+              <label for="eparentesto2"><strong>Parentesto</strong></label>
+              <input type="text" id="eparentesto2" name="eparentesto2" value="" maxlength="40" autofocus="autofocus">
+            </div>
+            
+          </section>
+          <!--*****************************************************************************************************************************-->
+
+          <header>
+            <legend><h1>Detalle del Cliente</h1></legend>
+          </header>
+
+          <section id="contenido">
+            <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+            <div class="div2">
+              <label for="vehiculo"><strong>Vehículo</strong></label>
+              <input type="text" id="vehiculo" name="vehiculo" value="" maxlength="40" autofocus="autofocus">
+            </div>
+
+            <div class="div2">
+              <label for="vplaca"><strong>Placa</strong></label>
+              <input type="text" id="vplaca" name="vplaca" value="" maxlength="40" autofocus="autofocus">
+            </div>
+
+            <div class="div2">
+              <label for="vsoat"><strong>Soat</strong></label>
+              <input type="number" id="vsoat" name="vsoat" value="" oninput="limitNumberLength(this)" autofocus="autofocus">
+            </div>
+
+            <div class="div2">
+              <label for="vtriesgo"><strong>Todo riesgo</strong></label>
+              <input type="number" id="vtriesgo" name="vtriesgo" value="" oninput="limitNumberLength(this)" autofocus="autofocus">
+            </div>
+            <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+            <div class="div2">
+              <label for="moto"><strong>Moto</strong></label>
+              <input type="text" id="moto" name="moto" value="" maxlength="40" autofocus="autofocus">
+            </div>
+
+            <div class="div2">
+              <label for="mplaca"><strong>Placa</strong></label>
+              <input type="text" id="mplaca" name="mplaca" value="" maxlength="40" autofocus="autofocus">
+            </div>
+
+            <div class="div2">
+              <label for="msoat"><strong>Soat</strong></label>
+              <input type="number" id="msoat" name="msoat" value="" oninput="limitNumberLength(this)" autofocus="autofocus">
+            </div>
+
+            <div class="div2">
+              <label for="mtriesgo"><strong>Todo riesgo</strong></label>
+              <input type="number" id="mtriesgo" name="mtriesgo" value="" oninput="limitNumberLength(this)" autofocus="autofocus">
+            </div>
+
+          </section>
+            <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+            <h3>Medicina prepagada</h3>
+          <section id="contenido">
+            <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+            <div class="div7">
+              <label for="eps"><strong>EPS</strong></label>
+              <input type="text" id="eps" name="eps" value="" maxlength="40" autofocus="autofocus" required>
+            </div>
+
+            <div class="div7">
+              <label for="mprepagada"><strong>Medicina prepagada</strong></label>
+              <input type="text" id="mprepagada" name="mprepagada" value="" maxlength="40" autofocus="autofocus">
+            </div>
+
+          </section>
+          <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+          <h3>Educativo</h3>
+          <section id="contenido">
+            <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+            <div class="div2">
+              <label for="hijos"><strong>Hijos</strong></label>
+              <input type="text" id="hijos" name="hijos" value="" maxlength="40" autofocus="autofocus" required>
+            </div>
+
+            <div class="div2">
+              <label for="edad"><strong>Edad</strong></label>
+              <input type="text" id="edad" name="edad" value="" maxlength="40" autofocus="autofocus" required>
+            </div>
+
+            <div class="div2">
+              <label for="grado"><strong>Grado</strong></label>
+              <input type="text" id="grado" name="grado" value="" maxlength="40" autofocus="autofocus">
+            </div>
+
+          </section>
+          <!--*****************************************************************************************************************************-->
+
+          <header>
+            <legend><h1>Datos de Pago</h1></legend>
+          </header>
+
+          <section id="contenido">
+            <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+            <div class="div2">
+              <label for="vventa"><strong>Valor de la venta</strong></label>
+              <input type="number" id="vventa" name="vventa" value="" oninput="limitNumberLength(this)" autofocus="autofocus" required>
+            </div>
+
+            <div class="div2">
+              <label for="ncuotas"><strong>Número de cuotas</strong></label>
+              <input type="number" id="ncuotas" name="ncuotas" value="" oninput="limitNumberLength(this)" autofocus="autofocus" required>
+            </div>
+
+            <div class="div2">
+              <label for="vmaproximado"><strong>Valor mensual aproximado</strong></label>
+              <input type="number" id="vmaproximado" name="vmaproximado" value="" oninput="limitNumberLength(this)" autofocus="autofocus" required>
+            </div>
+            
+          </section>
+          <!--*****************************************************************************************************************************-->
+
+          <header>
+            <legend><h1>Forma de Pago</h1></legend>
+          </header>
+
+          <section id="contenido">
+            <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+            <div class="div2">
+              <label for="tcredito"><strong>Tarjetas de crédito</strong></label>
+              <input type="number" id="tcredito" name="tcredito" value="" oninput="limitNumberLength(this)" autofocus="autofocus">
+            </div>
+
+            <div class="div2">
+              <label for="consigna"><strong>Consignaciones</strong></label>
+              <input type="number" id="consigna" name="consigna" value="" oninput="limitNumberLength(this)" autofocus="autofocus">
+            </div>
+
+            <div class="div2">
+              <label for="transaccion"><strong>Transacciones</strong></label>
+              <input type="number" id="transaccion" name="transaccion" value="" oninput="limitNumberLength(this)" autofocus="autofocus">
+            </div>
+
+            <div class="div2">
+              <label for="efectivo"><strong>Efectivo</strong></label>
+              <input type="number" id="efectivo" name="efectivo" value="" oninput="limitNumberLength(this)" autofocus="autofocus">
+            </div>
+            <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+            <div class="div8">
+              <label for="titular"><strong>Titular</strong></label>
+              <input type="text" id="titular" name="titular" value="" maxlength="40" autofocus="autofocus" required>
+            </div>
+
+            <div class="div8">
+              <label for="banco"><strong>Banco</strong></label>
+              <input type="text" id="banco" name="banco" value="" maxlength="40" autofocus="autofocus" required>
+            </div>
+
+            <div class="div8">
+              <label for="tipo"><strong>Tipo</strong></label>
+              <input type="text" id="tipo" name="tipo" value="" maxlength="40" autofocus="autofocus" required>
+            </div>
+
+            <div class="div8">
+              <label for="numero"><strong>Número</strong></label>
+              <input type="number" id="numero" name="numero" value="" oninput="limitNumberLength(this)" autofocus="autofocus" required>
+            </div>
+
+            <div class="div9">
+              <label for="mes"><strong>Mes</strong></label>
+              <input type="number" id="mes" name="mes" value="" oninput="limitNumberLength(this)" autofocus="autofocus" required>
+            </div>
+
+            <div class="div9">
+              <label for="ano"><strong>Año</strong></label>
+              <input type="number" id="ano" name="ano" value="" oninput="limitNumberLength(this)" autofocus="autofocus" required>
+            </div>
+
+            <div class="div10">
+              <label for="cvv"><strong>CVV</strong></label>
+              <input type="number" id="cvv" name="cvv" value="" oninput="limitNumberLength(this)" autofocus="autofocus" required>
+            </div>
+            
+          </section>
+          <!--*****************************************************************************************************************************-->
+
+          <header>
+            <legend><h1>Datos de Envío</h1></legend>
+          </header>
+
+          <section id="contenido">
+            <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+            <div class="div8">
+              <label for="emensajeria"><strong>Empresa de mensajería</strong></label>
+              <select id="emensajeria" name="emensajeria" required>
+                <option></option>
+                <option>opción1</option>
+                <option>opción2</option>
+                <option>opción3</option>
+              </select>
+            </div>
+
+            <div class="div8">
+              <label for="guia"><strong>Guía</strong></label>
+              <input type="number" id="guia" name="guia" value="" oninput="limitNumberLength(this)" autofocus="autofocus" required>
+            </div>
+
+            <div class="div8">
+              <label for="eenvio"><strong>Estado del envío</strong></label>
+              <select id="eenvio" name="eenvio" required>
+                <option></option>
+                <option>opción1</option>
+                <option>opción2</option>
+                <option>opción3</option>
+              </select>
+            </div>
+
+            <div class="div8">
+              <label for="gestionado"><small>Gestionado por:</small></label>
+              <input type="text" id="gestionado" name="gestionado" value="" maxlength="40" autofocus="autofocus" required>
+            </div>
+
+            <div class="div8">
+              <label for="fgestion"><small>Fecha gestión:</small></label>
+              <input type="datetime-local" id="fgestion" name="fgestion" readonly required>
+            </div>
+            
+          </section>
+          <!--*****************************************************************************************************************************--> 
+            <hr>
+          <footer>
+            <div class="divenviar">
+              <input type="submit" name="enviar" id="enviar" value="Enviar">
+            </div>
+          </footer>
+        </fieldset>
+      </form>
+      <!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+      <form autocomplete="off" action="Cargarfile.php" method="post" name="Cargarfile" enctype="multipart/form-data">
+        <fieldset>
+          <!--*****************************************************************************************************************************-->
+          <section id="contenido">
+            <label for="excelFile" id="labelFile">Subir archivo Excel:</label>
+            <input type="file" id="excelFile" name="excelFile" required>
+            <input type="submit" name="cargar" id="cargar" value="Cargar">  
+          </section>
+        </fieldset>
+      </form>
+
+        <!--///////////////////////////////////////////////////////////////////////////////////////////-->
+        <script>
+          function limitNumberLength(input)
+          {
+            const maxLength = 15;
+            if (input.value.length > maxLength) 
+            {
+                input.value = input.value.slice(0, maxLength);
+            }
+          }
+        </script>
+        <!--///////////////////////////////////////////////////////////////////////////////////////////-->
+        <script>
+          const campoFgestion = document.getElementById("fgestion");
+          const campoFventa = document.getElementById("fventa");
+          const fechaHoraActual = new Date().toISOString().slice(0, 16);
+          campoFgestion.value = fechaHoraActual;
+          campoFventa.value = fechaHoraActual;
+        </script>
+        <!--///////////////////////////////////////////////////////////////////////////////////////////-->
+
+      </div>
+    </body>
+
+</html>

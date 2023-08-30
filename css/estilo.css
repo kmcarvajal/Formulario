@@ -1,0 +1,145 @@
+body {
+  font-family: 'VERDANA';
+}
+#fondo{
+  max-width: 90%;
+	margin: 1% auto;
+	align-content: center;
+}
+#fondo2{
+  max-width: 500px;
+	margin: 1% auto;
+	align-content: center;
+}
+header{
+  background-color: #273442;
+  border-radius: 15px 15px 0px 0px;
+}
+header h1, header h2{
+  text-align: center;
+  color: white;
+}
+h3{
+  text-align: center;
+  color: #273442;
+}
+#contenido, footer{
+  color: black;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+.div1, .div2, .div3, .div4, .div5, .div6, .div7, .div8, .div9, .div10{
+  float: left;
+  padding: 1%;
+}
+.div1{
+  width: 31%;
+}
+.div2{
+  width: 23%;
+}
+.div3{
+  width: 64%;
+}
+.div4{
+  width: 99%;
+}
+.div5{
+  width: 19%;
+}
+.div6{
+  width: 8%;
+}
+.div7{
+  width: 47%;
+}
+.div8{
+  width: 17%;
+}
+.div9{
+  width: 5%;
+}
+.div10{
+  width: 6%;
+}
+.divotro{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.divlabelotro1{
+  display: flex;
+}
+.labelotro11{
+  width: 200px;
+}
+.labelotro111{
+  width: 36%;
+}
+.divlabelotro2{
+  width: 13%;
+}
+#nregistro, #gestionado{
+  border: none;
+}
+#fgestion, #fventa{
+  border: none;
+  background: none;
+}
+.radio{
+  width: 20px;
+  height: 20px;
+  margin: 5%;
+}
+.strong2{
+  display: contents;
+}
+strong{
+  display: block;
+  padding: 1%;
+}
+input, select{
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  width: 95%;
+  padding: 1%;
+  text-align: right;
+}
+hr{
+  margin-top: 2%;
+  border: 1px solid #273442;
+}
+.divenviar{
+  width: 8%;
+  padding: 1%;
+  margin-bottom: 2%;
+}
+#enviar{
+  font-size: 1.5em;
+  text-align: center;
+  cursor: pointer;
+}
+#enviar:hover, #cargar:hover{
+  background-color: #273442;
+  color: #ecf0f1;
+}
+#labelFile{
+  margin-top: 1%;
+  padding: 1%;
+  width: 90%;
+  text-align: center;
+}
+#excelFile{
+  width: 40%;
+  text-align: center;
+}
+#cargar{
+  width: 5%;
+  cursor: pointer;
+  text-align: center;
+  -webkit-text-stroke-width: thin;
+  margin-left: 1%;
+}
