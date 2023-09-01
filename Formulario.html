@@ -11,15 +11,21 @@
     <body>
       <div id="fondo">
 
-      <form autocomplete="off" action="Formulario.php" method="post" name="formulario">
+      <form autocomplete="off" action="Formulario.php" method="post" name="formulario" accept-charset="UTF-8">
+
         <fieldset>
+          
+        <navbar>
+          <a href="Registros.php" class="navbarlink">► Visualizar Registros</a>
+        </navbar>
+        
           <!--*****************************************************************************************************************************-->
           <header>
             <legend><h1>Formato de Venta</h1></legend>
           </header>
 
           <h3>Información general</h3>
-          <section id="contenido">
+          <section class="contenido">
             <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
             <div class="div1">
               <label for="ejecutivo"><strong>Ejecutivo</strong></label>
@@ -77,7 +83,7 @@
             <legend><h1>Información del Cliente</h1></legend>
           </header>
 
-          <section id="contenido">
+          <section class="contenido">
             <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
             <div class="divotro">
               <div class="divlabelotro1">
@@ -177,7 +183,7 @@
             <legend><h1>Información de la Venta</h1></legend>
           </header>
 
-          <section id="contenido">
+          <section class="contenido">
             <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
             <div class="divotro">
               <div class="divlabelotro2">
@@ -275,7 +281,7 @@
             <legend><h1>Detalle del Cliente</h1></legend>
           </header>
 
-          <section id="contenido">
+          <section class="contenido">
             <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
             <div class="div2">
               <label for="vehiculo"><strong>Vehículo</strong></label>
@@ -321,7 +327,7 @@
             <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 
             <h3>Medicina prepagada</h3>
-          <section id="contenido">
+          <section class="contenido">
             <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
             <div class="div7">
               <label for="eps"><strong>EPS</strong></label>
@@ -337,7 +343,7 @@
           <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 
           <h3>Educativo</h3>
-          <section id="contenido">
+          <section class="contenido">
             <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
             <div class="div2">
               <label for="hijos"><strong>Hijos</strong></label>
@@ -361,7 +367,7 @@
             <legend><h1>Datos de Pago</h1></legend>
           </header>
 
-          <section id="contenido">
+          <section class="contenido">
             <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
             <div class="div2">
               <label for="vventa"><strong>Valor de la venta</strong></label>
@@ -385,7 +391,7 @@
             <legend><h1>Forma de Pago</h1></legend>
           </header>
 
-          <section id="contenido">
+          <section class="contenido">
             <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
             <div class="div2">
               <label for="tcredito"><strong>Tarjetas de crédito</strong></label>
@@ -449,7 +455,7 @@
             <legend><h1>Datos de Envío</h1></legend>
           </header>
 
-          <section id="contenido">
+          <section class="contenido">
             <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
             <div class="div8">
               <label for="emensajeria"><strong>Empresa de mensajería</strong></label>
@@ -497,10 +503,10 @@
         </fieldset>
       </form>
       <!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
-      <form autocomplete="off" action="Cargarfile.php" method="post" name="Cargarfile" enctype="multipart/form-data">
+      <form autocomplete="off" action="Cargarfile.php" method="post" name="Cargarfile" enctype="multipart/form-data" accept-charset="UTF-8">
         <fieldset>
           <!--*****************************************************************************************************************************-->
-          <section id="contenido">
+          <section class="contenido">
             <label for="excelFile" id="labelFile">Subir archivo Excel:</label>
             <input type="file" id="excelFile" name="excelFile" required>
             <input type="submit" name="cargar" id="cargar" value="Cargar">  

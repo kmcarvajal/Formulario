@@ -23,7 +23,7 @@ h3{
   text-align: center;
   color: #273442;
 }
-#contenido, footer{
+.contenido, footer{
   color: black;
   display: flex;
   flex-flow: row wrap;
@@ -142,4 +142,44 @@ hr{
   text-align: center;
   -webkit-text-stroke-width: thin;
   margin-left: 1%;
+}
+navbar {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+.navbarlink, .footlink {
+  text-decoration: none;
+  color: #273442;
+  font-size: 16px;
+  margin-right: 20px;
+  font-weight: bold;
+}
+.navbarlink:hover {
+  color: #4e647c;
+}
+.footboton {
+  background-color: #f0f0f0;
+  margin-top: 12px;
+}
+.pboton{
+  margin: 5px;
+}
+#conttabla{
+  display: inline-grid;
+  max-width: 100%;
+  overflow: auto;
+}
+#conttabla table{
+  display: flex;
+  min-width: 100%;
+  border-collapse: collapse;
+  border: none;
+}
+#conttabla th, #conttabla td {
+  padding: 8px;
+  border: 1px solid #ccc;
+  white-space: nowrap;
 }

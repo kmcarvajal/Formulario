@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="css/estilo.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device=width, user-scalable=no">
-      <title>Resgistro</title>
+    <title>Resgistro</title>
   </head>
   <body>
     <div id="fondo2">
@@ -12,9 +12,10 @@
       <header>
         <legend><h2>Registrado!</h2></legend>
       </header>
-      <section id="contenido">
+      <section class="contenido">
         <p>
           <?php
+          header('Content-Type: text/html; charset=utf-8');
           //Recuperar Datos
           $ejecutivo = $_POST['ejecutivo'];
           $empresa = $_POST['empresa'];
@@ -84,16 +85,11 @@
           $eenvio = $_POST['eenvio'];
           $gestionado = $_POST['gestionado'];
           $fgestion = $_POST['fgestion'];
-          // Datos de la base de datos
-          $usuario = 'root' ;
-          $contraseña = 'usbw' ;
-          $servidor = 'localhost' ;
-          $basededatos = 'formulario' ;
-          // Creación de la conexión a la base de datos con mysql_connect()
-          $conexion=mysqli_connect($servidor, $usuario, $contraseña,$basededatos) or die("Problemas con la conexión");
+          //Conexión
+          include('config.php');
           mysqli_query($conexion,"insert 
-          registro(Ejecutivo,Empresa,UltimaModificacion,ControlCalidad,EstatusVenta,EstadoActual,Descripcion,NumeroRegistro,FechaVenta,Nombre,Documento,FechaNacimiento,Telefono1,Whatsapp,Telefono2,Direccion,Barrio,Departamento,Ciudad,Email,ReferenciaGeografica,Observaciones,Observaciones2,TipoVenta,Beneficiario1,Parentesto1,Beneficiario2,Parentesto2,TipoMascota,NombreMascota,Raza,EdadMascota,ExequialBeneficiario1,ExequialParentesto1,ExequialBeneficiario2,ExequialParentesto2,Vehiculo,PlacaVehiculo,SoatVehiculo,TodoRiesgoVehiculo,Moto,PlacaMoto,SoatMoto,TodoRiesgoMoto,eps,MedicinaPrepagada,Hijos,Edad,Grado,ValorVenta,NumeroCuotas,ValorMensualAproximado,TarjetasCredito,Consignaciones,Transacciones,Efectivo,Titular,Banco,Tipo,Numero,Mes,Ano,CVV,EmpresaMensajeria,Guia,EmpresaEnvio,Gestionado,FechaGestion) 
-          values('$ejecutivo','$empresa','$umodificacion','$ccalidad','$eventa','$eactual','$descripcion','$nregistro','$fventa','$nombre','$documento','$fnacimiento','$telefono1','$whatsapp','$telefono2','$direccion','$barrio','$departamento','$ciudad','$email','$rgeografica','$observaciones','$observaciones2','$tventa','$beneficiario1','$parentesto1','$beneficiario2','$parentesto2','$mtipo','$mnombre','$raza','$medad','$ebeneficiario1','$eparentesto1','$ebeneficiario2','$eparentesto2','$vehiculo','$vplaca','$vsoat','$vtriesgo','$moto','$mplaca','$msoat','$mtriesgo','$eps','$mprepagada','$hijos','$edad','$grado','$vventa','$ncuotas','$vmaproximado','$tcredito','$consigna','$transaccion','$efectivo','$titular','$banco','$tipo','$numero','$mes','$ano','$cvv','$emensajeria','$guia','$eenvio','$gestionado','$fgestion')")
+          registro (Ejecutivo,Empresa,UltimaModificacion,ControlCalidad,EstatusVenta,EstadoActual,Descripcion,NumeroRegistro,FechaVenta,Nombre,Documento,FechaNacimiento,Telefono1,Whatsapp,Telefono2,Direccion,Barrio,Departamento,Ciudad,Email,ReferenciaGeografica,Observaciones,Observaciones2,TipoVenta,Beneficiario1,Parentesto1,Beneficiario2,Parentesto2,TipoMascota,NombreMascota,Raza,EdadMascota,ExequialBeneficiario1,ExequialParentesto1,ExequialBeneficiario2,ExequialParentesto2,Vehiculo,PlacaVehiculo,SoatVehiculo,TodoRiesgoVehiculo,Moto,PlacaMoto,SoatMoto,TodoRiesgoMoto,eps,MedicinaPrepagada,Hijos,Edad,Grado,ValorVenta,NumeroCuotas,ValorMensualAproximado,TarjetasCredito,Consignaciones,Transacciones,Efectivo,Titular,Banco,Tipo,Numero,Mes,Ano,CVV,EmpresaMensajeria,Guia,EmpresaEnvio,Gestionado,FechaGestion) 
+          values ('$ejecutivo','$empresa','$umodificacion','$ccalidad','$eventa','$eactual','$descripcion','$nregistro','$fventa','$nombre','$documento','$fnacimiento','$telefono1','$whatsapp','$telefono2','$direccion','$barrio','$departamento','$ciudad','$email','$rgeografica','$observaciones','$observaciones2','$tventa','$beneficiario1','$parentesto1','$beneficiario2','$parentesto2','$mtipo','$mnombre','$raza','$medad','$ebeneficiario1','$eparentesto1','$ebeneficiario2','$eparentesto2','$vehiculo','$vplaca','$vsoat','$vtriesgo','$moto','$mplaca','$msoat','$mtriesgo','$eps','$mprepagada','$hijos','$edad','$grado','$vventa','$ncuotas','$vmaproximado','$tcredito','$consigna','$transaccion','$efectivo','$titular','$banco','$tipo','$numero','$mes','$ano','$cvv','$emensajeria','$guia','$eenvio','$gestionado','$fgestion')")
           or die("Problemas en el select".mysqli_error($conexion));
           // Cerrar conexión a la base de datos
           mysqli_close($conexion);
@@ -109,4 +105,4 @@
       </fieldset>
     </div>
   </body>
-</html>s
+</html>

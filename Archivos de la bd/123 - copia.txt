@@ -1,0 +1,13 @@
+DELIMITER $$
+
+CREATE TRIGGER `tuasistencia`.`actualizacion` AFTER INSERT ON `tuasistencia`.`registro_gp`
+FOR EACH ROW BEGIN
+    -- Insertar los datos en la tabla `afiliado`
+    INSERT INTO `tuasistencia`.`afiliado` (
+        
+    ) VALUES (
+        
+    );
+END$$
+
+DELIMITER ;

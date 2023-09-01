@@ -12,20 +12,18 @@
         <header>
             <legend><h2>Cargado!</h2></legend>
         </header>
-        <section id="contenido">
+        <section class="contenido">
             <p>
                 <?php
+                header('Content-Type: text/html; charset=utf-8');
+
                 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_FILES["excelFile"]))
                 {
                   $csvFile = $_FILES["excelFile"]["tmp_name"];
                   // Abrir archivo CSV
                   $csv = fopen($csvFile, 'r');
-                  // Conexión a la base de datos
-                  $conexion = new mysqli("localhost", "root", "usbw", "formulario");
-                  if ($conexion->connect_error)
-                  {
-                    die("Problemas con la conexión: " . $conexion->connect_error);
-                  }
+                  //Conexión
+                  include('config.php');
                   // Leer primera línea y descártala si es necesario
                   $firstRow = fgetcsv($csv, 0, ',');
                   // Procesa el archivo línea por línea
