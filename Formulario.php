@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="css/estilo.css">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device=width, user-scalable=no">
-    <title>Resgistro</title>
-  </head>
-  <body>
-    <div id="fondo2">
-      <fieldset>
+
+<head>
+  <link rel="stylesheet" href="css/estilo.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device=width, user-scalable=no">
+  <title>Resgistro</title>
+</head>
+
+<body>
+  <div id="fondo2">
+    <fieldset>
       <header>
-        <legend><h2>Registrado!</h2></legend>
+        <legend>
+          <h2>Registrado!</h2>
+        </legend>
       </header>
       <section class="contenido">
         <p>
@@ -87,7 +91,7 @@
           $fgestion = $_POST['fgestion'];
           //Conexión
           include('config.php');
-          mysqli_query($conexion,"insert registro (Ejecutivo,Empresa,UltimaModificacion,ControlCalidad,EstatusVenta,EstadoActual,Descripcion,NumeroRegistro,FechaVenta,Nombre,Documento,
+          mysqli_query($conexion, "insert registro (Ejecutivo,Empresa,UltimaModificacion,ControlCalidad,EstatusVenta,EstadoActual,Descripcion,NumeroRegistro,FechaVenta,Nombre,Documento,
           FechaNacimiento,Telefono1,Whatsapp,Telefono2,Direccion,Barrio,Departamento,Ciudad,Email,ReferenciaGeografica,Observaciones,Observaciones2,TipoVenta,Beneficiario1,Parentesto1,
           Beneficiario2,Parentesto2,TipoMascota,NombreMascota,Raza,EdadMascota,ExequialBeneficiario1,ExequialParentesto1,ExequialBeneficiario2,ExequialParentesto2,Vehiculo,PlacaVehiculo,
           SoatVehiculo,TodoRiesgoVehiculo,Moto,PlacaMoto,SoatMoto,TodoRiesgoMoto,eps,MedicinaPrepagada,Hijos,Edad,Grado,ValorVenta,NumeroCuotas,ValorMensualAproximado,TarjetasCredito,
@@ -97,7 +101,7 @@
           '$beneficiario2','$parentesto2','$mtipo','$mnombre','$raza','$medad','$ebeneficiario1','$eparentesto1','$ebeneficiario2','$eparentesto2','$vehiculo','$vplaca','$vsoat',
           '$vtriesgo','$moto','$mplaca','$msoat','$mtriesgo','$eps','$mprepagada','$hijos','$edad','$grado','$vventa','$ncuotas','$vmaproximado','$tcredito','$consigna','$transaccion',
           '$efectivo','$titular','$banco','$tipo','$numero','$mes','$ano','$cvv','$emensajeria','$guia','$eenvio','$gestionado','$fgestion')")
-          or die("Problemas en el select".mysqli_error($conexion));
+            or die("Problemas en el select" . mysqli_error($conexion));
           // Cerrar conexión a la base de datos
           mysqli_close($conexion);
           echo "Datos guardados correctamente en la base de datos Registro!";
@@ -106,10 +110,11 @@
       </section>
       <footer>
         <p>
-        <a href="Formulario.html">Aceptar</a>
+          <a href="Formulario.html">Aceptar</a>
         </p>
       </footer>
-      </fieldset>
-    </div>
-  </body>
+    </fieldset>
+  </div>
+</body>
+
 </html>
