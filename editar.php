@@ -24,8 +24,8 @@ if (isset($_GET['NumeroRegistro']) && is_numeric($_GET['NumeroRegistro'])) {
 // Verificar si se ha enviado un formulario de edición
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Obtener los datos actualizados del formulario
-    $newEjecutivo = $_POST['Ejecutivo'];
-    $newEmpresa = $_POST['Empresa'];
+    $newEjecutivo = $_POST['ejecutivo'];
+    $newEmpresa = $_POST['empresa'];
     $newumodificacion = $_POST['umodificacion'];
     $newccalidad = $_POST['ccalidad'];
     $neweventa = $_POST['eventa'];
@@ -63,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $newvehiculo = $_POST['vehiculo'];
     $newvplaca = $_POST['vplaca'];
     $newvsoat = $_POST['vsoat'];
-    $newvtriesgo = $_POST['newvtriesgo'];
+    $newvtriesgo = $_POST['vtriesgo'];
     $newmoto = $_POST['moto'];
     $newmplaca = $_POST['mplaca'];
     $newmsoat = $_POST['msoat'];
@@ -103,7 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     NombreMascota = '$newmnombre', Raza = '$newraza', EdadMascota = '$newmedad', ExequialBeneficiario1 = '$newebeneficiario1', ExequialParentesto1 = '$neweparentesto1', 
     ExequialBeneficiario2 = '$newebeneficiario2', ExequialParentesto2 = '$neweparentesto2', Vehiculo = '$newvehiculo', PlacaVehiculo = '$newvplaca', SoatVehiculo = '$newvsoat', 
     TodoRiesgoVehiculo = '$newvtriesgo', Moto = '$newmoto', PlacaMoto = '$newmplaca', SoatMoto = '$newmsoat', TodoRiesgoMoto = '$newmsoat', Eps = '$neweps', 
-    MedicinaPrepagada = '$newmprepagada', Hijos = '$newhijos', Edad = '$newedad', Grado = '$newgrado', ValorVenta, = '$newvventa', NumeroCuotas = '$newncuotas', 
+    MedicinaPrepagada = '$newmprepagada', Hijos = '$newhijos', Edad = '$newedad', Grado = '$newgrado', ValorVenta = '$newvventa', NumeroCuotas = '$newncuotas', 
     ValorMensualAproximado = '$newvmaproximado', TarjetasCredito = '$newtcredito', Consignaciones = '$newconsigna', Transacciones = '$newtransaccion', Efectivo = '$newefectivo', 
     Titular = '$newtitular', Banco = '$newbanco', Tipo = '$newtipo', Numero = '$newnumero', Mes = '$newmes', Ano = '$newano', CVV = '$newcvv', EmpresaMensajeria = '$newemensajeria', 
     Guia = '$newguia', EstadoEnvio = '$neweenvio', Gestionado = '$newgestionado', FechaGestion = '$newfgestion'
