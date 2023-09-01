@@ -87,9 +87,16 @@
           $fgestion = $_POST['fgestion'];
           //Conexión
           include('config.php');
-          mysqli_query($conexion,"insert 
-          registro (Ejecutivo,Empresa,UltimaModificacion,ControlCalidad,EstatusVenta,EstadoActual,Descripcion,NumeroRegistro,FechaVenta,Nombre,Documento,FechaNacimiento,Telefono1,Whatsapp,Telefono2,Direccion,Barrio,Departamento,Ciudad,Email,ReferenciaGeografica,Observaciones,Observaciones2,TipoVenta,Beneficiario1,Parentesto1,Beneficiario2,Parentesto2,TipoMascota,NombreMascota,Raza,EdadMascota,ExequialBeneficiario1,ExequialParentesto1,ExequialBeneficiario2,ExequialParentesto2,Vehiculo,PlacaVehiculo,SoatVehiculo,TodoRiesgoVehiculo,Moto,PlacaMoto,SoatMoto,TodoRiesgoMoto,eps,MedicinaPrepagada,Hijos,Edad,Grado,ValorVenta,NumeroCuotas,ValorMensualAproximado,TarjetasCredito,Consignaciones,Transacciones,Efectivo,Titular,Banco,Tipo,Numero,Mes,Ano,CVV,EmpresaMensajeria,Guia,EmpresaEnvio,Gestionado,FechaGestion) 
-          values ('$ejecutivo','$empresa','$umodificacion','$ccalidad','$eventa','$eactual','$descripcion','$nregistro','$fventa','$nombre','$documento','$fnacimiento','$telefono1','$whatsapp','$telefono2','$direccion','$barrio','$departamento','$ciudad','$email','$rgeografica','$observaciones','$observaciones2','$tventa','$beneficiario1','$parentesto1','$beneficiario2','$parentesto2','$mtipo','$mnombre','$raza','$medad','$ebeneficiario1','$eparentesto1','$ebeneficiario2','$eparentesto2','$vehiculo','$vplaca','$vsoat','$vtriesgo','$moto','$mplaca','$msoat','$mtriesgo','$eps','$mprepagada','$hijos','$edad','$grado','$vventa','$ncuotas','$vmaproximado','$tcredito','$consigna','$transaccion','$efectivo','$titular','$banco','$tipo','$numero','$mes','$ano','$cvv','$emensajeria','$guia','$eenvio','$gestionado','$fgestion')")
+          mysqli_query($conexion,"insert registro (Ejecutivo,Empresa,UltimaModificacion,ControlCalidad,EstatusVenta,EstadoActual,Descripcion,NumeroRegistro,FechaVenta,Nombre,Documento,
+          FechaNacimiento,Telefono1,Whatsapp,Telefono2,Direccion,Barrio,Departamento,Ciudad,Email,ReferenciaGeografica,Observaciones,Observaciones2,TipoVenta,Beneficiario1,Parentesto1,
+          Beneficiario2,Parentesto2,TipoMascota,NombreMascota,Raza,EdadMascota,ExequialBeneficiario1,ExequialParentesto1,ExequialBeneficiario2,ExequialParentesto2,Vehiculo,PlacaVehiculo,
+          SoatVehiculo,TodoRiesgoVehiculo,Moto,PlacaMoto,SoatMoto,TodoRiesgoMoto,eps,MedicinaPrepagada,Hijos,Edad,Grado,ValorVenta,NumeroCuotas,ValorMensualAproximado,TarjetasCredito,
+          Consignaciones,Transacciones,Efectivo,Titular,Banco,Tipo,Numero,Mes,Ano,CVV,EmpresaMensajeria,Guia,EstadoEnvio,Gestionado,FechaGestion) 
+          values ('$ejecutivo','$empresa','$umodificacion','$ccalidad','$eventa','$eactual','$descripcion','$nregistro','$fventa','$nombre','$documento','$fnacimiento','$telefono1',
+          '$whatsapp','$telefono2','$direccion','$barrio','$departamento','$ciudad','$email','$rgeografica','$observaciones','$observaciones2','$tventa','$beneficiario1','$parentesto1',
+          '$beneficiario2','$parentesto2','$mtipo','$mnombre','$raza','$medad','$ebeneficiario1','$eparentesto1','$ebeneficiario2','$eparentesto2','$vehiculo','$vplaca','$vsoat',
+          '$vtriesgo','$moto','$mplaca','$msoat','$mtriesgo','$eps','$mprepagada','$hijos','$edad','$grado','$vventa','$ncuotas','$vmaproximado','$tcredito','$consigna','$transaccion',
+          '$efectivo','$titular','$banco','$tipo','$numero','$mes','$ano','$cvv','$emensajeria','$guia','$eenvio','$gestionado','$fgestion')")
           or die("Problemas en el select".mysqli_error($conexion));
           // Cerrar conexión a la base de datos
           mysqli_close($conexion);

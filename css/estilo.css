@@ -183,3 +183,12 @@ navbar {
   border: 1px solid #ccc;
   white-space: nowrap;
 }
+#idenviar{
+  width: 15% !important;
+}
+#idfootlink{
+  font-size: 20px !important;
+}.editarlink, .eliminarlink {
+  text-decoration: none;
+  color: rgb(107, 55, 55);
+}

@@ -31,9 +31,10 @@
         <th>Departamento</th><th>Ciudad</th><th>Email</th><th>ReferenciaGeografica</th><th>Observaciones</th><th>Observaciones2</th><th>TipoVenta</th><th>Beneficiario1</th>
         <th>Parentesto1</th><th>Beneficiario2</th><th>Parentesto2</th><th>TipoMascota</th><th>NombreMascota</th><th>Raza</th><th>EdadMascota</th><th>ExequialBeneficiario1</th>
         <th>ExequialParentesto1</th><th>ExequialBeneficiario2</th><th>ExequialParentesto2</th><th>Vehiculo</th><th>PlacaVehiculo</th><th>SoatVehiculo</th><th>TodoRiesgoVehiculo</th>
-        <th>Moto</th><th>PlacaMoto</th><th>SoatMoto</th><th>TodoRiesgoMoto</th><th>eps</th><th>MedicinaPrepagada</th><th>Hijos</th><th>Edad</th><th>Grado</th><th>ValorVenta</th>
+        <th>Moto</th><th>PlacaMoto</th><th>SoatMoto</th><th>TodoRiesgoMoto</th><th>Eps</th><th>MedicinaPrepagada</th><th>Hijos</th><th>Edad</th><th>Grado</th><th>ValorVenta</th>
         <th>NumeroCuotas</th><th>ValorMensualAproximado</th><th>TarjetasCredito</th><th>Consignaciones</th><th>Transacciones</th><th>Efectivo</th><th>Titular</th><th>Banco</th>
-        <th>Tipo</th><th>Numero</th><th>Mes</th><th>Ano</th><th>CVV</th><th>EmpresaMensajeria</th><th>Guia</th><th>EmpresaEnvio</th><th>Gestionado</th><th>FechaGestion</th></tr>';
+        <th>Tipo</th><th>Numero</th><th>Mes</th><th>Ano</th><th>CVV</th><th>EmpresaMensajeria</th><th>Guia</th><th>EstadoEnvio</th><th>Gestionado</th><th>FechaGestion</th>
+        <th>Editar</th><th>Eliminar</th></tr>';
 
         while ($fila = mysqli_fetch_assoc($resultado)) {
             echo '<tr>';
@@ -81,7 +82,7 @@
             echo '<td>' . $fila['PlacaMoto'] . '</td>';
             echo '<td>' . $fila['SoatMoto'] . '</td>';
             echo '<td>' . $fila['TodoRiesgoMoto'] . '</td>';
-            echo '<td>' . $fila['eps'] . '</td>';
+            echo '<td>' . $fila['Eps'] . '</td>';
             echo '<td>' . $fila['MedicinaPrepagada'] . '</td>';
             echo '<td>' . $fila['Hijos'] . '</td>';
             echo '<td>' . $fila['Edad'] . '</td>';
@@ -102,9 +103,11 @@
             echo '<td>' . $fila['CVV'] . '</td>';
             echo '<td>' . $fila['EmpresaMensajeria'] . '</td>';
             echo '<td>' . $fila['Guia'] . '</td>';
-            echo '<td>' . $fila['EmpresaEnvio'] . '</td>';
+            echo '<td>' . $fila['EstadoEnvio'] . '</td>';
             echo '<td>' . $fila['Gestionado'] . '</td>';
             echo '<td>' . $fila['FechaGestion'] . '</td>';
+            echo '<td><a href="editar.php?NumeroRegistro=' . $fila['NumeroRegistro'] . '" class="editarlink">Editar</a></td>';
+            echo '<td><a href="eliminar.php?NumeroRegistro=' . $fila['NumeroRegistro'] . '" class="eliminarlink">Eliminar</a></td>';
             echo '</tr>';
         }
 
@@ -123,7 +126,7 @@
   </section>
   <footer class="footboton">
     <p class="pboton">
-    <a href="Formulario.html" class="footlink">Volver</a>
+    <a href="Formulario.html" class="footlink" id="idfootlink">Volver</a>
     </p>
   </footer>
   </fieldset>
