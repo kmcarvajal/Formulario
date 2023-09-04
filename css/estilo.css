@@ -126,7 +126,7 @@ hr{
   background-color: #273442;
   color: #ecf0f1;
 }
-#labelFile{
+#labelFile, #labelbusqueda{
   margin-top: 1%;
   padding: 1%;
   width: 90%;
@@ -136,7 +136,11 @@ hr{
   width: 40%;
   text-align: center;
 }
-#cargar{
+#busqueda {
+  width: 30%;
+  text-align: left;
+}
+#cargar, #buscar{
   width: 5%;
   cursor: pointer;
   text-align: center;
@@ -191,4 +195,10 @@ navbar {
 }.editarlink, .eliminarlink {
   text-decoration: none;
   color: rgb(107, 55, 55);
+}
+#labelbusqueda, #busqueda, #buscar{
+  padding: 0.4% !important;
+}
+#buscar{
+  display: none;
 }

@@ -16,6 +16,39 @@
           <h2>Consulta de Registros</h2>
         </legend>
       </header>
+
+      <section class="contenido">
+        <label for="busqueda" id="labelbusqueda">Buscar:</label>
+        <input type="text" id="busqueda" onkeyup="buscar()">
+        <button onclick="buscar()" id="buscar">Buscar</button>
+      </section>
+      <script>
+        function buscar() {
+          var input, filter, table, tr, td, i, txtValue;
+          input = document.getElementById("busqueda");
+          filter = input.value.toUpperCase();
+          table = document.getElementsByTagName("table")[0];
+          tr = table.getElementsByTagName("tr");
+
+          // Recorre todas las filas de la tabla y muestra u oculta según el filtro
+          for (i = 1; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td");
+            for (var j = 0; j < td.length; j++) {
+              if (td[j]) {
+                txtValue = td[j].textContent || td[j].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                  tr[i].style.display = "";
+                  break; // Muestra la fila y pasa a la siguiente
+                } else {
+                  tr[i].style.display = "none"; // Oculta la fila
+                }
+              }
+            }
+          }
+        }
+      </script>
+
+
       <section class="contenido" id="conttabla">
         <p>
 
