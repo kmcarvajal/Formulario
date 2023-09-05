@@ -196,6 +196,10 @@ navbar {
   text-decoration: none;
   color: rgb(107, 55, 55);
 }
+.visualizarlink{
+  text-decoration: none;
+  color: rgb(55, 105, 107);
+}
 #labelbusqueda, #busqueda, #buscar{
   padding: 0.4% !important;
 }

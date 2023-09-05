@@ -71,7 +71,7 @@
         <th>Moto</th><th>PlacaMoto</th><th>SoatMoto</th><th>TodoRiesgoMoto</th><th>Eps</th><th>MedicinaPrepagada</th><th>Hijos</th><th>Edad</th><th>Grado</th><th>ValorVenta</th>
         <th>NumeroCuotas</th><th>ValorMensualAproximado</th><th>TarjetasCredito</th><th>Consignaciones</th><th>Transacciones</th><th>Efectivo</th><th>Titular</th><th>Banco</th>
         <th>Tipo</th><th>Numero</th><th>Mes</th><th>Ano</th><th>CVV</th><th>EmpresaMensajeria</th><th>Guia</th><th>EstadoEnvio</th><th>Gestionado</th><th>FechaGestion</th>
-        <th>Editar</th><th>Eliminar</th></tr>';
+        <th>Visualizar</th><th>Editar</th><th>Eliminar</th></tr>';
 
             while ($fila = mysqli_fetch_assoc($resultado)) {
               echo '<tr>';
@@ -143,8 +143,9 @@
               echo '<td>' . $fila['EstadoEnvio'] . '</td>';
               echo '<td>' . $fila['Gestionado'] . '</td>';
               echo '<td>' . $fila['FechaGestion'] . '</td>';
+              echo '<td><a href="visualizar.php?NumeroRegistro=' . $fila['NumeroRegistro'] . '" class="visualizarlink">Visualizar</a></td>';
               echo '<td><a href="editar.php?NumeroRegistro=' . $fila['NumeroRegistro'] . '" class="editarlink">Editar</a></td>';
-              echo '<td><a href="eliminar.php?NumeroRegistro=' . $fila['NumeroRegistro'] . '" class="eliminarlink">Eliminar</a></td>';
+              echo '<td><a href="eliminar.php?NumeroRegistro=' . $fila['NumeroRegistro'] . '" class="eliminarlink" onclick="confirmarEliminacion(event)">Eliminar</a></td>';
               echo '</tr>';
             }
 
@@ -168,6 +169,29 @@
       </footer>
     </fieldset>
   </div>
+
+  <!--///////////////////////////////////////////////////////////////////////////////////////////-->
+  <script>
+    function confirmarEliminacion(event) {
+      event.preventDefault(); // Previene la acción predeterminada del enlace
+
+      // Preguntar al usuario la contraseña
+      const contraseña = prompt("Por favor, digite la contraseña para eliminar este registro:");
+
+      // Comprobar si la contraseña ingresada es válida
+      const contraseñaValida = "contraseña";
+
+      if (contraseña === contraseñaValida) {
+        // Si la contraseña es válida, redirigir al archivo eliminar.php
+        window.location.href = event.target.href;
+      } else {
+        // Si la contraseña es incorrecta, mostrar un mensaje de error
+        alert("Cancelado!. No se eliminó el registro.");
+      }
+    }
+  </script>
+  <!--///////////////////////////////////////////////////////////////////////////////////////////-->
+
 </body>
 
 </html>

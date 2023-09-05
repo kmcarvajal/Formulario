@@ -1,0 +1,37 @@
+DELIMITER $$
+
+CREATE TRIGGER `tuasistencia`.`actualizacion` AFTER INSERT ON `tuasistencia`.`registro_gp`
+FOR EACH ROW BEGIN
+    -- Insertar los datos en la tabla `afiliado`
+    INSERT INTO `tuasistencia`.`afiliado` (
+	id,
+	numero,
+	nombre,
+	dni,
+	email,
+	iniciovigencia,
+        fecharegistro,
+	telefono1,
+	telefono2,
+	direccion,
+	provincia,
+	zona,
+	subzona
+    ) VALUES (
+	NEW.NumeroRegistro,
+	NEW.Documento,
+	NEW.Nombre,
+	NEW.Documento,
+	NEW.Email,
+	NEW.FechaVenta,
+	NEW.FechaGestion
+	NEW.Telefono1,
+	NEW.Telefono2,
+	NEW.Direccion,
+	NEW.Departamento,
+	NEW.Ciudad,
+	NEW.Barrio
+    );
+END$$
+
+DELIMITER ;
