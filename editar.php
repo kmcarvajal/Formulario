@@ -128,7 +128,7 @@ mysqli_close($conexion);
 <head>
   <link rel="stylesheet" href="css/estilo.css">
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device=width, user-scalable=no">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
   <title>Editar Dato</title>
 </head>
 
